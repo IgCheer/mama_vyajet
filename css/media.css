@@ -1144,6 +1144,10 @@ font-size: 24px;
      margin-top: 0;
      
    }
+    
+    .nav-link {
+    font-size: 14px;
+  }
    
    .contacts-title {
      margin-bottom: 40px;
