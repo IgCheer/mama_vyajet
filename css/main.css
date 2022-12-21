@@ -45,24 +45,6 @@ body {
 /* Nav */
 
 
-
-.menu-list {
-  display: flex;
-  column-gap: 50px;
-  font-weight: 500;
-  font-size: 20px;
-  
-}
-
-.menu-link {
-  color: #000;
-}
-
-
-
-
-
-
 .nav-list {
   display: flex;
  
