@@ -95,6 +95,19 @@
 
        
     }
+    
+    .nav-list {
+    display: flex;
+   
+    column-gap: 30px;
+    font-weight: 500;
+    font-size: 20px;
+  }
+
+  .nav-link {
+    font-size: 12px;
+  }
+   
 
     .header-nav {
         flex-direction: column;
