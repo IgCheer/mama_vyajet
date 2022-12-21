@@ -1103,6 +1103,11 @@
     width: 200px;
   }
 
+    .shop-card-text {
+    font-size: 22px;
+    text-align: left;
+    width: 100%;
+  }
   
   .title-1 {
 font-size: 24px;
