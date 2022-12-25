@@ -72,6 +72,7 @@
         font-size: 22px;
     }
 
+    
     .header-content p {
         font-size: 12px;
     }
@@ -95,19 +96,6 @@
 
        
     }
-    
-    .nav-list {
-    display: flex;
-   
-    column-gap: 30px;
-    font-weight: 500;
-    font-size: 20px;
-  }
-
-  .nav-link {
-    font-size: 12px;
-  }
-   
 
     .header-nav {
         flex-direction: column;
@@ -221,6 +209,24 @@
 @media (max-width: 420px) {
 
 
+  .nav__linkk {
+    margin: 0px 0px 30px 0px;
+    display: block;
+    color: rgb(0, 0, 0);
+    font-size: 32px;
+    text-align: center;
+    
+  }
+  
+  .nav-link {
+    margin: 0px 0px 30px 0px;
+    display: block;
+    color: rgb(0, 0, 0);
+    font-size: 26px;
+    text-align: center;
+  }
+
+
   .btn-up {
     position: fixed; /* фиксированная позиция */
     background-color: #673ab7; /* цвет заднего фона */
@@ -287,6 +293,8 @@
 
        
     }
+
+  
 
     .header-nav {
         flex-direction: column;
@@ -1099,14 +1107,26 @@
     width: 60px;
   }
 
-  .project-img {
-    width: 200px;
-  }
 
-    .shop-card-text {
+  .shop-card-text {
     font-size: 22px;
     text-align: left;
     width: 100%;
+  }
+  .project-img {
+    width: 200px;
+  }
+  .nav-list {
+    display: flex;
+   
+    column-gap: 30px;
+    font-weight: 500;
+    font-size: 20px;
+  }
+
+  .nav-link {
+    font-size: 14px;
+    font-weight: 500;
   }
   
   .title-1 {
@@ -1129,6 +1149,8 @@ font-size: 24px;
     text-transform: uppercase;
     
   }
+
+  
   
   .service-card p {
     font-size: 14px;
@@ -1144,11 +1166,6 @@ font-size: 24px;
      margin-top: 0;
      
    }
-    
-    .nav-link {
-    font-size: 14px;
-    font-weight: 500;
-  }
    
    .contacts-title {
      margin-bottom: 40px;
@@ -1208,4 +1225,97 @@ font-size: 24px;
    .work-card-img {
     text-align: center;
    }
+
+
+   
+
+   .menu__icon {
+    z-index: 5;
+    display: block;
+    position: relative;
+    width: 35px;
+    height: 20px;
+    cursor: pointer;
+    
+ 
+  }
+
+  .menu__icon span,
+  .menu__icon::before,
+  .menu__icon::after{
+    left: 0;
+    position: absolute;
+    height: 10%;
+    width: 100%;
+    transition: all 0.3s ease 0s;
+    background-color: rgb(0, 0, 0);
+  }
+
+  .menu__icon::before,
+  .menu__icon::after{
+    content: "";
+  }
+
+  .menu__icon::before{
+    top: 0;
+
+  }
+
+  .menu__icon::after{
+  bottom: 0;
+}
+
+.menu__icon span {
+  top: 50%;
+  transform: scale(1) translate(0px,-50%);
+}
+
+.menu__icon._active span {
+  transform: scale(0) translate(0px, -50%);
+}
+
+.menu__icon._active::before {
+  top: 50%;
+  transform: rotate(-45deg) translate(0px, -50%);
+}
+
+.menu__icon._active::after {
+  bottom: 50%;
+  transform: rotate(45deg) translate(0px, 50%);
+}
+
+.nav-link {
+  margin: 0px 0px 30px 0px;
+  display: block;
+  color: rgb(0, 0, 0);
+  font-size: 26px;
+  text-align: center;
+}
+
+.logo {
+  display: none;
+}
+
+.nav-list{
+  display: block;
+  position: fixed;
+  z-index: 3;
+
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  
+  background-color: rgb(227, 230, 128);
+  padding: 200px 30px 30px 40px;
+  transition: left 0.3s ease 0s;
+  overflow: auto;
+}
+
+.nav-list._active {
+ left: 0;
+}
+
+
+
 }
