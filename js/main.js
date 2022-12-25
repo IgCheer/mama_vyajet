@@ -1,100 +1,31 @@
-/* Один */
-function scrollTo(elementOne) {
-    window.scroll ({
-        left: 0,
-        top: elementOne.offsetTop,
-        behavior: 'smooth'
-    })
-}
-let buttonOne = document.querySelector('.works1');
-let workOne = document.querySelector('#works');
-buttonOne.addEventListener('click', () => {
-   scrollTo(works);
-});
-
-
-
-function scrollTo(elementTwo) {
-    window.scroll ({
-        left: 0,
-        top: elementTwo.offsetTop,
-        behavior: 'smooth'
-    })
-}
-let buttonTwo = document.querySelector('.works1');
-let workTwo = document.querySelector('#works');
-buttonTwo.addEventListener('click', () => {
-   scrollTo(works);
-});
-
-
-
-
-function scrollTo(elementTwo) {
-    window.scroll ({
-        left: 0,
-        top: elementTwo.offsetTop,
-        behavior: 'smooth'
-    })
-}
-
-let buttonThree = document.querySelector('.shop1');
-let shopTwo = document.querySelector('#shop');
-buttonThree.addEventListener('click', () => {
-   scrollTo(shop);
-});
-
-
-
-function scrollTo(elementFour) {
-    window.scroll ({
-        left: 0,
-        top: elementFour.offsetTop,
-        behavior: 'smooth'
-    })
-}
-
-let buttonFour = document.querySelector('.contacts1');
-let shopFour = document.querySelector('#contacts');
-buttonFour.addEventListener('click', () => {
-   scrollTo(contacts);
-});
-
-
-
-function scrollTo(elementFive) {
-  window.scroll ({
-      left: 0,
-      top: elementFive.offsetTop,
-      behavior: 'smooth'
-  })
-}
-
-let buttonFive = document.querySelector('.dostavkaoplata1');
-let shopFive = document.querySelector('#dostavkaoplata');
-buttonFive.addEventListener('click', () => {
- scrollTo(dostavkaoplata);
-});
-
-
-
-
-
-
 AOS.init();
 
+const menuLinks = document.querySelectorAll('.nav__linkk[data-goto]');
+if (menuLinks.length > 0) {
+  menuLinks.forEach(menuLink => {
+    menuLink.addEventListener("click", onMenuLinkClick);
+    });
+    
+    function onMenuLinkClick(e) {
+      const menuLink = e.target;
+      if(menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)){
+        const gotoBlock = document.querySelector(menuLink.dataset.goto);
+        const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset - document.querySelector('header').offsetHeight;
 
-const anchorsOne = document.querySelectorAll('a[href*="#"]')
+        if (iconMenu.classList.contains('_active')) {
+          document.body.classList.remove('_lock');
+          iconMenu.classList.remove('_active');
+          navList.classList.remove('_active');
+        }
 
-for (let anchor of anchorsOne) {
-    anchor.addEventListener("click", function(event){
-        event.preventDefault();
-        const blockId = anchor.getAttribute('href')
-        document.querySelector('' + blockId).scrollIntoView({
-            behavior: "smooth",
-            block: "start"
-        })
-    })
+
+        window.scrollTo ({
+          top: gotoBlockValue,
+          behavior: "smooth"
+        });
+        e.preventDefault();
+    }
+  }
 }
 
 
@@ -155,3 +86,17 @@ const btnUp = {
   }
   
   btnUp.addEventListener();
+
+
+
+  // --------------------- Бурер меню ------------------------ //
+
+  const iconMenu = document.querySelector('.menu__icon');
+  const navList = document.querySelector('.nav-list');
+  if (iconMenu) {
+    iconMenu.addEventListener("click", function(e){
+      document.body.classList.toggle('_lock');
+      iconMenu.classList.toggle('_active');
+      navList.classList.toggle('_active');
+    });
+  }
