@@ -21,31 +21,46 @@
 
                  <div class="header-nav">
                     
+                  <div class="heder__menu">
                     <a href="#!" class="logo" >М@м@ вяжет</a>
-          
-
+                    <div class="menu__icon">
+                      <span></span>
+                    </div>
+                      </div>
                    
-
-
+                  
+                   
+                    
+                    
                    <nav id="nav" class="nav">
                     <ul class="nav-list">
+                      
+
                         <div class="nav-link">
-                          
+                         
                           <div class="btn-up btn-up_hide"></div>
                           
                           <div class="nav-link">
-                            <button class="dostavkaoplata1">Доставка</button>
+
+                            <li><a data-goto=".works_1" href="#!" class="nav__linkk">Галерея</a></li>
+                            <li><a data-goto=".shop_1" href="#!" class="nav__linkk">Магазин</a></li>
+                            <li><a data-goto=".dostavka-oplata_1" href="#!" class="nav__linkk">Доставка и оплата</a></li>
+                            <li><a data-goto=".contacts_1" href="#!" class="nav__linkk">Контакты</a></li>
+                           
+                            <!--<button class="works1">Галерея</button>
+                          
                           </div>
-                        </div>
-                        <div class="nav-link">
-                          <button class="works1">Галерея</button>
                         </div>
                         <div class="nav-link">
                           <button class="shop1">Магазин</button>
                         </div>
                         <div class="nav-link">
-                          <button class="contacts1">Контакты</button>
+                          <button class="dostavkaoplata1">Доставка и оплата</button>
+                          
                         </div>
+                        <div class="nav-link">
+                          <button class="contacts1">Контакты</button>
+                        </div>-->
                       
                        
                       </ul>
@@ -137,7 +152,7 @@
                 </section>
 
                     <!-- Works -->
-                    <section class="works" id="works">
+                    <section class="works ">
                       <div class="container">
                         <div class="works-title">
                           <h2 class="title-2">Галерея</h2>
@@ -150,7 +165,7 @@
                           <img src="./brizgi.jpeg" width="500px" alt="" class="works-card-img">
                         </div>
 
-                        <h3 class="title-4" id="btnclothes-sk">Юбочка "Сказка"</h3>
+                        <h3 class="title-4 works_1" id="btnclothes-sk">Юбочка "Сказка"</h3>
                         <h3 class="order"><a href="#clothes-order-sk" style="color: rgb(57, 51, 51)">Заказать</a></h3>
 
                         <div class="works-project" data-aos="fade-down">
@@ -818,7 +833,7 @@
 
                         <!-- Shop -->
 
-                        <section class="shop" id="shop">
+                        <section class="shop ">
                           <div class="container">
                             <div class="shop-title">
                               <h2 class="title-3">Магазин</h2>
@@ -828,7 +843,7 @@
 
                             <div class="shop-card" data-aos="flip-down">
                               <img src="./panamka-1.jpg" height="400px" alt="" class="shop-card-img">
-                              <div class="shop-card-title" id="clothes-order-pa">Детские панамки <br> в ассортименте</div>
+                              <div class="shop-card-title shop_1" id="clothes-order-pa">Детские панамки <br> в ассортименте</div>
                               <p class="shop-card-text-1">
                                 🔹 Выполнены крючком из 100% хлопка.<br>
                                 🔹 Использованы декоративные элементы.<br>
@@ -1602,7 +1617,7 @@
                     </section>
                      
 
-                    <section class="dostavka-oplata" id="dostavkaoplata">
+                    <section class="dostavka-oplata ">
                       <div class="container">
                         <div class="portfolio-title">
                           <h2 class="title-dostavka" >Доставка и оплата</h2>
@@ -1618,7 +1633,7 @@
                         </p>
 
 
-                       <p class="dostavka1-1"> Условия возврата и обмена:</p>   
+                       <p class="dostavka1-1 dostavka-oplata_1"> Условия возврата и обмена:</p>   
 
                       <p class="dostavka1"> 
                         
@@ -1640,7 +1655,7 @@
                         При покупке на сумму от 8 000 ₽.</p>
 
                       
-                        <p class="dostavka1-1"> Сроки выполнения:</p>
+                        <p class="dostavka1-1 "> Сроки выполнения:</p>
                       <p class="dostavka1">Игрушки из наличия отправляются на следующие день после оплаты. Срок изготовления игрушек не из наличия до 7 рабочих дней. Срок изготовления плечевых изделий до 10 рабочих дней. Срок изготовления аксессуаров до 6 рабочих дней.</p>
 
 
@@ -1654,7 +1669,7 @@
 
                         <!-- Footer-->
                     
-                        <footer class="contacts" id="contacts">
+                        <footer class="contacts">
                           <div class="container">
                             <div class="contacts-title">
                               <h2 class="title-footer">Контакты</h2>
@@ -1663,7 +1678,7 @@
                             <div class="contacts-button" data-aos="fade-down">
                               <a target='_blank' href="https://vk.com/id11087481" class="btn-footer">Связаться со мной</a>
                             </div>
-                            <div class="contacts-content" data-aos="fade-down">
+                            <div class="contacts-content contacts_1" data-aos="fade-down">
                               <p>Мои социальные сети</p>
                             </div>
                             <div class="contacts-social" data-aos="zoom-in">
